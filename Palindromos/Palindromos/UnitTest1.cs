@@ -29,13 +29,26 @@ public class UnitTest1
 
     [Theory]
     [InlineData("anna!")]
-    [InlineData("5Oso")]
-    public void Reversar_Cadena(string cadena)
+    [InlineData("RaceCar")]
+    
+    public void Reversar_Cadena_Si_Es_PaLindromo_Deberia_Dar_Verdadero(string cadena)
     {
         //act
         var resultado = ValidarPalindromo(cadena);
         //assert
         resultado.Should().Be(true);
+    }
+    
+    [Theory]
+    [InlineData("5Oso")]
+    [InlineData("Hello, World!")]
+
+    public void Reversar_Cadena_Si_No_Es_PaLindromo_Deberia_Dar_Falso(string cadena)
+    {
+        //act
+        var resultado = ValidarPalindromo(cadena);
+        //assert
+        resultado.Should().Be(false);
     }
 
     private Boolean ValidarPalindromo(string cadena)
@@ -49,7 +62,7 @@ public class UnitTest1
        string cadenaInvertida = new string(caracteres);
        
        
-       if (nuevaCadena.Any(char.IsUpper)&&Regex.IsMatch(nuevaCadena, Patron)&&nuevaCadena!=cadenaInvertida)
+       if (nuevaCadena.Any(char.IsUpper) || Regex.IsMatch(nuevaCadena, Patron) || nuevaCadena!=cadenaInvertida)
         {
             return false;
         }
