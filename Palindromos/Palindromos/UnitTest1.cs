@@ -30,9 +30,9 @@ public class UnitTest1
     private Boolean ValidarPalindromo(string cadena)
     {
         string Patron = "[!\"·$%&/()=¿¡?'_:;,|@#€*+.]";
-         string nuevaCadena =Regex.Replace(cadena,Patron, "");  
+         string nuevaCadena =Regex.Replace(cadena.ToLower(),Patron, "");  
        Console.WriteLine(nuevaCadena); 
-       if (cadena.ToLower().Any(char.IsUpper))
+       if (nuevaCadena.Any(char.IsUpper))
         {
             return false;
         }
