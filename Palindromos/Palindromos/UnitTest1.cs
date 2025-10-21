@@ -27,11 +27,11 @@ public class UnitTest1
         resultado.Should().Be(true);
     }
 
-    [Fact]
-    public void Reversar_Cadena()
+    [Theory]
+    [InlineData("anna!")]
+    [InlineData("5Oso")]
+    public void Reversar_Cadena(string cadena)
     {
-        //arrange
-        var cadena = "5Oso5";
         //act
         var resultado = ValidarPalindromo(cadena);
         //assert
@@ -41,24 +41,15 @@ public class UnitTest1
     private Boolean ValidarPalindromo(string cadena)
     {
         string Patron = "[!\"·$%&/()=¿¡?'_:;,|@#€*+.]";
-         string nuevaCadena =Regex.Replace(cadena.ToLower(),Patron, "");  
-       Console.WriteLine(nuevaCadena); 
+        
+        string nuevaCadena =Regex.Replace(cadena.ToLower(),Patron, "");  
+     
        char[] caracteres = nuevaCadena.ToCharArray();
        Array.Reverse(caracteres);
        string cadenaInvertida = new string(caracteres);
        
        
-       if (nuevaCadena.Any(char.IsUpper))
-        {
-            return false;
-        }
-        if ( Regex.IsMatch(nuevaCadena, Patron))
-        {
-            
-            return false;
-        }
-
-        if (nuevaCadena!=cadenaInvertida)
+       if (nuevaCadena.Any(char.IsUpper)&&Regex.IsMatch(nuevaCadena, Patron)&&nuevaCadena!=cadenaInvertida)
         {
             return false;
         }
