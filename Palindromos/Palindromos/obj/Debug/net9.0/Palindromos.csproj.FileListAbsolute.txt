@@ -97,3 +97,4 @@ C:\Users\Ingrid.garcia\katasNataly\Palindromos\Palindromos\obj\Debug\net9.0\refi
 C:\Users\Ingrid.garcia\katasNataly\Palindromos\Palindromos\obj\Debug\net9.0\Palindromos.pdb
 C:\Users\Ingrid.garcia\katasNataly\Palindromos\Palindromos\obj\Debug\net9.0\Palindromos.genruntimeconfig.cache
 C:\Users\Ingrid.garcia\katasNataly\Palindromos\Palindromos\obj\Debug\net9.0\ref\Palindromos.dll
+C:\Users\Ingrid.garcia\katasNataly\Palindromos\Palindromos\obj\Debug\net9.0\Palindromos.sourcelink.json
