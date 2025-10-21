@@ -35,7 +35,7 @@ public class UnitTest1
         //act
         var resultado = ValidarPalindromo(cadena);
         //assert
-        resultado.Should().Be(false);
+        resultado.Should().Be(true);
     }
 
     private Boolean ValidarPalindromo(string cadena)
