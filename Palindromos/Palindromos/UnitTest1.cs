@@ -17,6 +17,6 @@ public class UnitTest1
 
     private Boolean ValidarPalindromo(string cadena)
     {
-        return true;
+        return  !cadena.ToLower().Any(char.IsUpper);
     }
 }
