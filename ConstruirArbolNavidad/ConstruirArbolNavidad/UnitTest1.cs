@@ -17,6 +17,7 @@ public class UnitTest1
 
     private int CreacionArbol(int altura)
     {
-        return 5;
+        
+        return altura*altura+1;
     }
 }
