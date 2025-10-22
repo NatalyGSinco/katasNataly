@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ConstruirArbolNavidad")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b8d87daf3e05674f84d990544ca1ad241ea6a381")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2291f0ded6e1228114a3b6d9d732b98bcaa95a6e")]
 [assembly: System.Reflection.AssemblyProductAttribute("ConstruirArbolNavidad")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ConstruirArbolNavidad")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
