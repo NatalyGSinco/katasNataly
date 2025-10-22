@@ -5,7 +5,7 @@ namespace ConstruirArbolNavidad;
 public class UnitTest1
 {
     [Fact]
-    public void Test1()
+    public void Determinar_Numero_Esquema_Arbol_Navidad()
     {
         //arrange
                 var altura = 2;
