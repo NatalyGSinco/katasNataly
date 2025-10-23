@@ -5,7 +5,7 @@ namespace CajeroAutomatico;
 public class UnitTest1
 {
     [Fact]
-    public void Test1()
+    public void Saldo_A_Retirar_Excede_El_Saldo_Que_Hay_En_El_Cajero()
     {
         //arrange
         int saldoRetirar = 5300;
