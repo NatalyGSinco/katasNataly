@@ -18,7 +18,13 @@ public class UnitTest1
     private object RetiroCajero(int saldoRetirar)
     {
         int saldoCajero = 5100;
-            
-        return saldoRetirar<saldoCajero;
+        
+        if (saldoRetirar>saldoCajero)
+        {
+            Console.WriteLine("El cajero automático no dispone de dinero suficiente, por favor acuda al cajero automático más cercano");
+            return false;
+        }
+        return true;
+        
     }
 }
