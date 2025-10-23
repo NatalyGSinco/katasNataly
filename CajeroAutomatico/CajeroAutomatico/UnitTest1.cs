@@ -17,6 +17,8 @@ public class UnitTest1
 
     private object RetiroCajero(int saldoRetirar)
     {
-        return false;
+        int saldoCajero = 5100;
+            
+        return saldoRetirar<saldoCajero;
     }
 }
