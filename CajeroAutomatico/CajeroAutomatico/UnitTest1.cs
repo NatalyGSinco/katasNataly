@@ -30,7 +30,7 @@ public class UnitTest1
     {
         int saldoCajero = 5100;
         
-        if (saldoRetirar!=5100)
+        if (saldoRetirar>saldoCajero)
         {
             Console.WriteLine("El cajero automático no dispone de dinero suficiente, por favor acuda al cajero automático más cercano");
             return false;
