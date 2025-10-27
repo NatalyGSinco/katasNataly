@@ -13,7 +13,7 @@ public class UnitTest1
         //act
         var resultado = ResultadoPuntaje(puntajeJugador1,puntajeJugador2);
         //assert
-        resultado.Should().Be("15","30");
+        resultado.Should().Be("El jugador1 tiene el resultado de puntaje: '15' y el jugador2 tiene el resultado de puntaje: '30'");
     }
 
     private object ResultadoPuntaje(int p1, int p2)
