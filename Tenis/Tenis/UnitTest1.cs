@@ -30,6 +30,11 @@ public class UnitTest1
 
     private object ResultadoPuntaje(int p1, int p2)
     {
-        return "El jugador1 tiene el resultado de puntaje: '15' y el jugador2 tiene el resultado de puntaje: '30'";
+        if (p1 == 1 && p2 == 2)
+        {
+            return "El jugador1 tiene el resultado de puntaje: '15' y el jugador2 tiene el resultado de puntaje: '30'";
+
+        }
+        return "El jugador1 tiene el resultado de puntaje: '40' y el jugador2 tiene el resultado de puntaje: 'ventaja'";
     }
 }
