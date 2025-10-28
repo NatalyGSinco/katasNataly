@@ -76,7 +76,12 @@ public class UnitTest1
             {
                 resultadop2 = "'ventaja'";
             }
-            
+        }
+
+        if (p1 >= 3 && p2 >= 3 && p1 == p2)
+        {
+            resultadop1 = "'iguales'";
+            resultadop2 = "'iguales'";
         }
 
         mensajeResultado=$"El jugador1 tiene el resultado de puntaje: {resultadop1} y el jugador2 tiene el resultado de puntaje: {resultadop2}";
