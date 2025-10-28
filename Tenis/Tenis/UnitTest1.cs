@@ -27,6 +27,18 @@ public class UnitTest1
         //assert
         resultado.Should().Be("El jugador1 tiene el resultado de puntaje: '40' y el jugador2 tiene el resultado de puntaje: 'ventaja'");
     }
+    
+    [Fact]
+    public void Si_Los_Dos_Jugadores_Tienen_3_Puntos_Y_Son_Iguales_El_Puntaje ()
+    {
+        //arrange
+        var puntajeJugador1 = 4;
+        var puntajeJugador2 = 4;
+        //act
+        var resultado = ResultadoPuntaje(puntajeJugador1,puntajeJugador2);
+        //assert
+        resultado.Should().Be("El jugador1 tiene el resultado de puntaje: 'iguales' y el jugador2 tiene el resultado de puntaje: 'iguales'");
+    }
 
     private object ResultadoPuntaje(int p1, int p2)
     {
