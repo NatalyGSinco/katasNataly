@@ -49,7 +49,7 @@ public class UnitTest1
         //act
         var resultado = ResultadoPuntaje(puntajeJugador1,puntajeJugador2);
         //assert
-        resultado.Should().Be("El jugador1 tiene el resultado de puntaje: 'pierde' y el jugador2 tiene el resultado de puntaje: 'gana'");
+        resultado.Should().Be("El jugador1 tiene el resultado de puntaje: 'gana' y el jugador2 tiene el resultado de puntaje: 'pierde'");
     }
 
     private object ResultadoPuntaje(int p1, int p2)
@@ -78,6 +78,12 @@ public class UnitTest1
         {
             resultadop2 = "'40'";
         }
+        
+        if (p1 >= 3 && p2 >= 3 && p1 == p2)
+        {
+            resultadop1 = "'iguales'";
+            resultadop2 = "'iguales'";
+        }
 
         if (p1 >= 3 && p2 >= 3)
         {
@@ -89,13 +95,19 @@ public class UnitTest1
                 resultadop2 = "'ventaja'";
             }
         }
-
-        if (p1 >= 3 && p2 >= 3 && p1 == p2)
+     
+        if (p1 >= 4 || p2 >= 4)
         {
-            resultadop1 = "'iguales'";
-            resultadop2 = "'iguales'";
+            if (p1-p2>1)
+            {
+                resultadop1 = "'gana'";
+                resultadop2 = "'pierde'";
+            }else if (p2 - p1 > 2)
+            {
+                resultadop2 = "'gana'";
+                resultadop1 = "'pierde'";
+            }
         }
-
         mensajeResultado=$"El jugador1 tiene el resultado de puntaje: {resultadop1} y el jugador2 tiene el resultado de puntaje: {resultadop2}";
        return mensajeResultado;
     }
