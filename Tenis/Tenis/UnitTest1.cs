@@ -4,16 +4,19 @@ namespace Tenis;
 
 public class UnitTest1
 {
-    [Fact]
-    public void Si_Los_Puntos_Son_Del_1_Al_3()
+    [Theory]
+    [InlineData(1,3)]
+    [InlineData(2,2)]
+    [InlineData(3,1)]
+    public void Si_Los_Puntos_Son_Del_1_Al_3(int puntajeJugador1,int puntajeJugador2)
     {
         //arrange
-        var puntajeJugador1 = 1;
-        var puntajeJugador2 = 2;
+        var resultadop1 = puntajeJugador1==1?"'15'":puntajeJugador1==2?"'30'":"'40'";
+        var resultadop2 = puntajeJugador2==1?"'15'":puntajeJugador2==2?"'30'":"'40'";
         //act
         var resultado = ResultadoPuntaje(puntajeJugador1,puntajeJugador2);
         //assert
-        resultado.Should().Be("El jugador1 tiene el resultado de puntaje: '15' y el jugador2 tiene el resultado de puntaje: '30'");
+        resultado.Should().Be($"El jugador1 tiene el resultado de puntaje: {resultadop1} y el jugador2 tiene el resultado de puntaje: {resultadop2}");
     }
     
     [Fact]
@@ -49,7 +52,7 @@ public class UnitTest1
         //act
         var resultado = ResultadoPuntaje(puntajeJugador1,puntajeJugador2);
         //assert
-        resultado.Should().Be("El jugador1 tiene el resultado de puntaje: 'gana' y el jugador2 tiene el resultado de puntaje: 'pierde'");
+        resultado.Should().Be($"El jugador1 tiene el resultado de puntaje: 'gana' y el jugador2 tiene el resultado de puntaje: 'pierde'");
     }
 
     private object ResultadoPuntaje(int p1, int p2)
