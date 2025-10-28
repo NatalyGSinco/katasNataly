@@ -30,11 +30,44 @@ public class UnitTest1
 
     private object ResultadoPuntaje(int p1, int p2)
     {
-        if (p1 == 1 && p2 == 2)
+        string resultadop1 = "";
+        string resultadop2 = "";
+        string mensajeResultado = "";
+        if (p1 == 1)
         {
-            return "El jugador1 tiene el resultado de puntaje: '15' y el jugador2 tiene el resultado de puntaje: '30'";
-
+            resultadop1 = "'15'";
+        }else if (p1 == 2)
+        {
+            resultadop1 = "'30'";
+        }else if (p1 == 3)
+        {
+            resultadop1 = "'40'";
         }
-        return "El jugador1 tiene el resultado de puntaje: '40' y el jugador2 tiene el resultado de puntaje: 'ventaja'";
+        
+        if (p2 == 1)
+        {
+            resultadop2 = "'15'";
+        }else if (p2 == 2)
+        {
+            resultadop2 = "'30'";
+        }else if (p2 == 3)
+        {
+            resultadop2 = "'40'";
+        }
+
+        if (p1 >= 3 && p2 >= 3)
+        {
+            if (p1-p2>0)
+            {
+                resultadop1 = "'ventaja'";
+            }else if (p2 - p1 > 0)
+            {
+                resultadop2 = "'ventaja'";
+            }
+            
+        }
+
+        mensajeResultado=$"El jugador1 tiene el resultado de puntaje: {resultadop1} y el jugador2 tiene el resultado de puntaje: {resultadop2}";
+       return mensajeResultado;
     }
 }
